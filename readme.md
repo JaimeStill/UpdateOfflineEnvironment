@@ -54,6 +54,7 @@ After everything is retrieved using the steps that follow, the `environment-upda
 1. Run the `update-ng` script
 2. Roll back incorrect dependency packages.
     * For example, if `zone.js@0.10.2` is installed, but `@angular/core@8.2.14` depends on `zone.js@~0.9.1`, use `npm view zone.js versions --json` to find the latest `0.9.x` version, and install it using `yarn add zone.js@0.9.x`.
+    * Build a test project using an [app stack template](https://github.com/JaimeStill/PatternsAndPractices/tree/master/template) to determine if `@angular-devkit/build-angular` incorrectly displays **Fail** messages when webpack is building the Angular project. Currently, `0.803.x` generates these incorrect messages. It is fine to roll back to `0.802.x` to avoid these error messages. They do not cause any problems beyond incorrect fail messages, but they bloat the Event Viewer log in Windows.
 3. Move `offline-cache` and `yarn.lock` to the `environment-update` folder.
 4. Save the latest version of the `node-sass` binaries, if missing, from [Releases](https://github.com/sass/node-sass/releases) to `environment-update\infrastructure\node-sass`.
 5. Save the latest build of `.node-gyp` from `%USERPROFILE%\.node-gyp` to `environment-update\user-profile\.node-gyp`.
