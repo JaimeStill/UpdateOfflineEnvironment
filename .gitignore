@@ -1,0 +1,5 @@
+environment-update
+bin
+obj
+offline-cache
+node_modules

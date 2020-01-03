@@ -1,0 +1,11 @@
+call dotnet add package --package-directory .\environment-update\user-profile\.nuget\packages Microsoft.AspNetCore.Mvc.NewtonsoftJson
+call dotnet add package --package-directory .\environment-update\user-profile\.nuget\packages Microsoft.AspNetCore.SpaServices
+call dotnet add package --package-directory .\environment-update\user-profile\.nuget\packages Microsoft.AspNetCore.SpaServices.Extensions
+call dotnet add package --package-directory .\environment-update\user-profile\.nuget\packages Microsoft.EntityFrameworkCore.Design
+call dotnet add package --package-directory .\environment-update\user-profile\.nuget\packages Microsoft.EntityFrameworkCore.SqlServer
+call dotnet add package --package-directory .\environment-update\user-profile\.nuget\packages Microsoft.EntityFrameworkCore.Relational
+call dotnet add package --package-directory .\environment-update\user-profile\.nuget\packages Microsoft.EntityFrameworkCore.Tools
+call dotnet add package --package-directory .\environment-update\user-profile\.nuget\packages Microsoft.Extensions.Configuration.Abstractions
+call dotnet add package --package-directory .\environment-update\user-profile\.nuget\packages Microsoft.Extensions.Configuration.Binder
+call dotnet add package --package-directory .\environment-update\user-profile\.nuget\packages System.DirectoryServices
+call dotnet add package --package-directory .\environment-update\user-profile\.nuget\packages System.DirectoryServices.AccountManagement
