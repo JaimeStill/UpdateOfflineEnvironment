@@ -1,4 +1,5 @@
 call dotnet add package --package-directory .\environment-update\user-profile\.nuget\packages Microsoft.AspNetCore.Mvc.NewtonsoftJson
+call dotnet add package --package-directory .\environment-update\user-profile\.nuget\packages Microsoft.AspNetCore.OData
 call dotnet add package --package-directory .\environment-update\user-profile\.nuget\packages Microsoft.AspNetCore.SpaServices
 call dotnet add package --package-directory .\environment-update\user-profile\.nuget\packages Microsoft.AspNetCore.SpaServices.Extensions
 call dotnet add package --package-directory .\environment-update\user-profile\.nuget\packages Microsoft.EntityFrameworkCore.Design
