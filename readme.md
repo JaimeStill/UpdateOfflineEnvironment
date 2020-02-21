@@ -14,6 +14,7 @@ After everything is retrieved using the steps that follow, the `environment-upda
 * [Visual Studio Code](https://code.visualstudio.com/docs/?dv=win64)
 * [Chrome](https://www.google.com/intl/en/chrome/browser/desktop/index.html?standalone=1)
 * [Firefox](https://www.mozilla.org/en-US/firefox/all/#product-desktop-release)
+* [Edge](https://www.microsoft.com/en-us/edge/business/download)
 
 ### Code Extensions
 
@@ -25,6 +26,7 @@ After everything is retrieved using the steps that follow, the `environment-upda
 * [MSBuild](https://marketplace.visualstudio.com/items?itemName=tintoy.msbuild-project-tools)
 * [npm Intellisense](https://marketplace.visualstudio.com/items?itemName=christian-kohler.npm-intellisense)
 * [Polacode](https://marketplace.visualstudio.com/items?itemName=pnp.polacode)
+* [PowerShell](https://marketplace.visualstudio.com/items?itemName=ms-vscode.PowerShell)
 * [SCSS Formatter](https://marketplace.visualstudio.com/items?itemName=sibiraj-s.vscode-scss-formatter)
 * [SVG](https://marketplace.visualstudio.com/items?itemName=jock.svg)
 * [tslint](https://marketplace.visualstudio.com/items?itemName=ms-vscode.vscode-typescript-tslint-plugin)
@@ -32,7 +34,8 @@ After everything is retrieved using the steps that follow, the `environment-upda
 #### Code Themes
 
 * [Atom One Dark](https://marketplace.visualstudio.com/items?itemName=akamud.vscode-theme-onedark)
-* [Forest Night](https://marketplace.visualstudio.com/items?itemName=sainnhe.forest-theme)
+* [Black Ocean](https://marketplace.visualstudio.com/items?itemName=zamerick.black-ocean)
+* [Forest Night](https://marketplace.visualstudio.com/items?itemName=sainnhe.forest-night)
 * [Gatito](https://marketplace.visualstudio.com/items?itemName=pawelgrzybek.gatito-theme)
 * [Horizon](https://marketplace.visualstudio.com/items?itemName=jolaleye.horizon-theme-vscode)
 * [Material Icon Theme](https://marketplace.visualstudio.com/items?itemName=PKief.material-icon-theme)
@@ -54,7 +57,4 @@ After everything is retrieved using the steps that follow, the `environment-upda
 1. Run the `update-ng` script
 2. Roll back incorrect dependency packages.
     * For example, if `zone.js@0.10.2` is installed, but `@angular/core@8.2.14` depends on `zone.js@~0.9.1`, use `npm view zone.js versions --json` to find the latest `0.9.x` version, and install it using `yarn add zone.js@0.9.x`.
-    * Build a test project using an [app stack template](https://github.com/JaimeStill/PatternsAndPractices/tree/master/template) to determine if `@angular-devkit/build-angular` incorrectly displays **Fail** messages when webpack is building the Angular project. Currently, `0.803.x` generates these incorrect messages. It is fine to roll back to `0.802.x` to avoid these error messages. They do not cause any problems beyond incorrect fail messages, but they bloat the Event Viewer log in Windows.
-3. Move `offline-cache` and `yarn.lock` to the `environment-update` folder.
-4. Save the latest version of the `node-sass` binaries, if missing, from [Releases](https://github.com/sass/node-sass/releases) to `environment-update\infrastructure\node-sass`.
-5. Save the latest build of `.node-gyp` from `%USERPROFILE%\.node-gyp` to `environment-update\user-profile\.node-gyp`.
+3. Copy `package.json`, and move `offline-cache` and `yarn.lock`, to the `environment-update` folder.
